@@ -1,0 +1,6 @@
+[package]
+name=fpmkunit
+version=2.2.4
+[require]
+packages=rtl paszlib fcl-process
+packages_win64_x86_64=

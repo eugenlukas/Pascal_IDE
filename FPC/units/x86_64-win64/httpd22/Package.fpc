@@ -1,0 +1,7 @@
+[package]
+name=httpd22
+version=2.2.4
+[require]
+libc=y
+packages_win64_x86_64=
+packages=rtl 

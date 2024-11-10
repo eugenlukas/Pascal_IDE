@@ -1,0 +1,6 @@
+[package]
+name=fcl-web
+version=2.2.4
+[require]
+packages=rtl fcl-base fcl-xml fcl-db fcl-process httpd22
+packages_win64_x86_64=fcl-xml ibase fcl-xml odbc fcl-xml mysql fcl-xml sqlite fcl-xml fcl-base fcl-xml fcl-base fcl-base fcl-xml  sqlite odbc fcl-base

@@ -1,0 +1,6 @@
+[package]
+name=paszlib
+version=2.2.4
+[require]
+packages=rtl hash
+packages_win64_x86_64=

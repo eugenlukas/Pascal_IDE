@@ -1,0 +1,8 @@
+[package]
+name=fcl-base
+version=2.2.4
+[require]
+packages_win32=winunits-base winunits-jedi
+packages_win64=winunits-base winunits-jedi
+packages=rtl 
+packages_win64_x86_64=

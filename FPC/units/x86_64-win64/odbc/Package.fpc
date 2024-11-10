@@ -1,0 +1,7 @@
+[package]
+name=odbc
+version=2.2.4
+[require]
+libc=n
+packages_win64_x86_64=
+packages=rtl 

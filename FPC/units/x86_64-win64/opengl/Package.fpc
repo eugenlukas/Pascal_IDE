@@ -1,0 +1,11 @@
+[package]
+name=opengl
+version=2.2.4
+[require]
+packages_linux=x11
+packages_freebsd=x11
+packages_openbsd=x11
+packages_win64_x86_64=
+packages=rtl 
+packages_netbsd=x11
+packages_darwin=x11

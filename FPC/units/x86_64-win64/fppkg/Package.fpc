@@ -1,0 +1,7 @@
+[package]
+name=fppkg
+version=2.2.4
+[require]
+packages=rtl fcl-base fcl-xml fcl-process fcl-net paszlib libcurl
+packages_win64_x86_64=
+tools=data2inc
