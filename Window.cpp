@@ -2,6 +2,7 @@
 #include <glad\glad.h>
 #include <GLFW\glfw3.h>
 #include "FileDialogs.h"
+#include <Windows.h>
 
 void Window::CreateMainWindow()
 {
@@ -53,6 +54,7 @@ void Window::CreateMainWindow()
 	// Main while loop
 	while (!glfwWindowShouldClose(m_Window))
 	{
+		Update();
 		Render();
 	}
 
@@ -64,6 +66,11 @@ void Window::CreateMainWindow()
 	glfwDestroyWindow(m_Window);
 	// Terminate GLFW before ending the program
 	glfwTerminate();
+}
+
+void Window::Update()
+{
+
 }
 
 void Window::Render()
@@ -80,40 +87,28 @@ void Window::Render()
 	ImGui_ImplGlfw_NewFrame();
 	ImGui::NewFrame();
 
-	static float popupTimer = 0.0f;
-	static bool showPopup = false;
-
 	if (ImGui::BeginMainMenuBar())
 	{
 		if (ImGui::BeginMenu("File"))
 		{
 			if (ImGui::MenuItem("Create new"))
 			{
-				m_pascalFilePath = "";
-				m_fileToEdit = "NONE";
-
-				m_Editor.SelectAll();
-				m_Editor.Delete();
+				ButtonCreateNew();
 			}
 			if (ImGui::MenuItem("Open", "Ctrl+O"))
 			{
-				m_pascalFilePath = FileDialogs::OpenFile("", *this);
-				m_fileToEdit = m_pascalFilePath.c_str();
-				OpenFile();
+				ButtonOpen();
 			}
 			if (ImGui::MenuItem("Save", "Ctrl+S"))
 			{
-				if (m_pascalFilePath != "")
+				ButtonSave();
+			}
+			if (ImGui::MenuItem("Save as.."))
+			{
+				std::string savePath = FileDialogs::SaveFile("", *this);
+				if (savePath != "")
 				{
-					if (SaveFile())
-					{
-						showPopup = true; // Show the popup when the Save button is clicked
-						popupTimer = 0.0f; // Reset the timer
-					}
-				}
-				else
-				{
-					m_pascalFilePath = FileDialogs::SaveFile("", *this);
+					m_pascalFilePath = savePath;
 					if (SaveFile())
 					{
 						showPopup = true; // Show the popup when the Save button is clicked
@@ -121,16 +116,6 @@ void Window::Render()
 					}
 					m_fileToEdit = m_pascalFilePath.c_str();
 				}
-			}
-			if (ImGui::MenuItem("Save as.."))
-			{
-				m_pascalFilePath = FileDialogs::SaveFile("Pascal File (*pas)\0.pas\0", *this);
-				if (SaveFile())
-				{
-					showPopup = true; // Show the popup when the Save button is clicked
-					popupTimer = 0.0f; // Reset the timer
-				}
-				m_fileToEdit = m_pascalFilePath.c_str();
 			}
 			ImGui::EndMenu();
 		}
@@ -169,7 +154,7 @@ void Window::Render()
 		ImGui::EndMainMenuBar();
 	}
 
-	// ImGUI window creation
+	// ImGUI editor window creation
 	ImGui::Begin("Editor");
 	// Text that appears in the window
 	ImGui::Text("%6d/%-6d %6d lines  | %s | %s | %s | %s", cpos.mLine + 1, cpos.mColumn + 1, m_Editor.GetTotalLines(),
@@ -177,29 +162,35 @@ void Window::Render()
 		m_Editor.CanUndo() ? "*" : " ",
 		m_Editor.GetLanguageDefinition().mName.c_str(), m_fileToEdit);
 	m_Editor.Render("Editor");
-	// Ends the window
+	ImGui::End();
+	// Ends the editor window
 
+	// ImGUI console window creation
+	ImGui::Begin("Console");
+	// Set the maximum width for text wrapping (in pixels)
+	ImGui::PushTextWrapPos(ImGui::GetContentRegionAvail().x);
+	// Display the error message
+	ImGui::Text(m_PascalCompiler->GetError().c_str());
+	// Pop the text wrap position to revert to default behavior
+	ImGui::PopTextWrapPos();
+	ImGui::End();
+	// Ends the editor window
+
+	// Update the timer
 	if (showPopup)
 	{
-		// Update the timer
 		popupTimer += ImGui::GetIO().DeltaTime;
-
-		// Show the popup
-		ImGui::OpenPopup("Saved!");
-
-		if (popupTimer > 1.0f) // Wait for 1 second
-		{
-			showPopup = false;  // Hide the popup after 1 second
-			popupTimer = 0.0f;  // Reset the timer
-		}
 	}
 
-	if (ImGui::BeginPopup("Saved!"))
+	// Automatically hide the popup after 1 second
+	if (popupTimer > .5f)
 	{
-		ImGui::Text("Saved!");
-		ImGui::EndPopup();
+		showPopup = false;
+		popupTimer = 0.0f;  // Reset the timer
 	}
-	ImGui::End();
+
+	if (showPopup)
+		ImGui::Text("Saved!");  // Display the text
 
 	// Renders the ImGUI elements
 	ImGui::Render();
@@ -209,6 +200,48 @@ void Window::Render()
 	glfwSwapBuffers(m_Window);
 	// Take care of all GLFW events
 	glfwPollEvents();
+}
+
+void Window::ButtonSave()
+{
+	if (m_pascalFilePath != "")
+	{
+		if (SaveFile())
+		{
+			showPopup = true; // Show the popup when the Save button is clicked
+			popupTimer = 0.0f; // Reset the timer
+		}
+	}
+	else
+	{
+		std::string savePath = FileDialogs::SaveFile("", *this);
+		if (savePath != "")
+		{
+			m_pascalFilePath = savePath;
+			if (SaveFile())
+			{
+				showPopup = true; // Show the popup when the Save button is clicked
+				popupTimer = 0.0f; // Reset the timer
+			}
+			m_fileToEdit = m_pascalFilePath.c_str();
+		}
+	}
+}
+
+void Window::ButtonOpen()
+{
+	m_pascalFilePath = FileDialogs::OpenFile("", *this);
+	m_fileToEdit = m_pascalFilePath.c_str();
+	OpenFile();
+}
+
+void Window::ButtonCreateNew()
+{
+	m_pascalFilePath = "";
+	m_fileToEdit = "NONE";
+
+	m_Editor.SelectAll();
+	m_Editor.Delete();
 }
 
 void Window::OpenFile()
@@ -254,3 +287,5 @@ bool Window::SaveFile()
 }
 
 const char* Window::m_fileToEdit = "NONE";
+float Window::popupTimer = 0.0f;
+bool Window::showPopup = false;
