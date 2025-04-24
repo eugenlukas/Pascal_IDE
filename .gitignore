@@ -361,3 +361,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/CodeHelpers/codetools.config
+/CodeHelpers/codetools.config
+/CodeHelpers/codetools.config
+/Tools/UI Element Getter
+/codetools.config
+/ppas.bat
+/log.txt
+/Lazarus/lazarus.exe
