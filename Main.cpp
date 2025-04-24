@@ -2,31 +2,26 @@
 #include <iostream>
 #include "Window.h"
 #include <windows.h>
-
+#include "stb_image.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd)
 {
+	int argc;
+	LPWSTR* argv = CommandLineToArgvW(GetCommandLineW(), &argc);
+
+	//Window creation
 	Window window;
-	window.CreateMainWindow();
+	if (argc > 1)
+	{
+		//Path to file to directly open
+		std::wstring filenameW = argv[1];
+		std::string filename = std::string(filenameW.begin(), filenameW.end());
+		window.CreateMainWindow(filename);
+	}
+	else
+	{
+		window.CreateMainWindow();
+	}
 
 	return 0;
 }
-
-//void test()
-//{
-//	PascalCompiler* pascalCompiler = new PascalCompiler();
-//
-//	std::string pasFilepath;
-//	std::cout << "Name of file: ";
-//	std::cin >> pasFilepath;
-//
-//	if (pascalCompiler->compilePascalToExe((std::filesystem::current_path() / (pasFilepath + ".pas")).string()))
-//	{
-//	}
-//	else
-//	{
-//	}
-//
-//	std::string openExeCommand = std::filesystem::current_path().string() + "\\" + pasFilepath + ".exe";
-//	system(openExeCommand.c_str()); //Open compiled program
-//}

@@ -1,6 +1,0 @@
-[package]
-name=fcl-xml
-version=2.2.4
-[require]
-packages=rtl fcl-base
-packages_win64_x86_64=

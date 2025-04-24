@@ -1,0 +1,51 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33135.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/glad.c"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "b954c9399e1f0524b8f32a5a60352ea85a98ea9215082f27e9f026b3f1c3b760"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/libraries/include/glad/glad.h"
+          },
+          "hashes": {
+            "sha-256": "fc3db2e87da16bacf634ac91ac4d82c0a78a813e63a634e2528a98528b12690b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/libraries/include/khr/khrplatform.h"
+          },
+          "hashes": {
+            "sha-256": "e206a6931f98ffe1c5c7ece69c4f94bbe1c9279243f40cbe7782848a0d3fa2de"
+          }
+        }
+      ]
+    }
+  ]
+}

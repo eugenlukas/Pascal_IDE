@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>F:\Pascal-IDE\</FILEPATH>
+      <FILENAME>Main.cpp</FILENAME>
+      <LINE>7</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inkonsistente Anmerkung für "WinMain": diese Instanz verfügt über keine Anmerkungen. Siehe c:\program files (x86)\windows kits\10\include\10.0.22621.0\um\winbase.h(1037). </DESCRIPTION>
+    <FUNCTION>WinMain</FUNCTION>
+    <DECORATED>WinMain</DECORATED>
+    <FUNCLINE>7</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>F:\Pascal-IDE\</FILEPATH>
+      <FILENAME>AutoCompletionPrediction.h</FILENAME>
+      <LINE>23</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Die Variable "AutoCompletionPrediction::m_pTextEditor" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6).</DESCRIPTION>
+    <FUNCTION>AutoCompletionPrediction::{ctor}</FUNCTION>
+    <DECORATED>??0AutoCompletionPrediction@@QEAA@XZ</DECORATED>
+    <FUNCLINE>23</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>AutoCompletionPrediction::m_pTextEditor</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

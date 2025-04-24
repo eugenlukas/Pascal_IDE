@@ -1,4 +1,8 @@
+F:\Pascal-IDE\AutoCompletionPrediction.cpp;F:\Pascal-IDE\ZwischenZeug\AutoCompletionPrediction.obj
 F:\Pascal-IDE\FileDialogs.cpp;F:\Pascal-IDE\ZwischenZeug\FileDialogs.obj
+F:\Pascal-IDE\FileLogger.h;F:\Pascal-IDE\ZwischenZeug\FileLogger.h.obj
+F:\Pascal-IDE\FileTree.cpp;F:\Pascal-IDE\ZwischenZeug\FileTree.obj
+F:\Pascal-IDE\FormDesignerWindow.cpp;F:\Pascal-IDE\ZwischenZeug\FormDesignerWindow.obj
 F:\Pascal-IDE\glad.c;F:\Pascal-IDE\ZwischenZeug\glad.obj
 F:\Pascal-IDE\imgui\imgui.cpp;F:\Pascal-IDE\ZwischenZeug\imgui.obj
 F:\Pascal-IDE\imgui\imgui_demo.cpp;F:\Pascal-IDE\ZwischenZeug\imgui_demo.obj
@@ -7,7 +11,10 @@ F:\Pascal-IDE\imgui\imgui_impl_glfw.cpp;F:\Pascal-IDE\ZwischenZeug\imgui_impl_gl
 F:\Pascal-IDE\imgui\imgui_impl_opengl3.cpp;F:\Pascal-IDE\ZwischenZeug\imgui_impl_opengl3.obj
 F:\Pascal-IDE\imgui\imgui_tables.cpp;F:\Pascal-IDE\ZwischenZeug\imgui_tables.obj
 F:\Pascal-IDE\imgui\imgui_widgets.cpp;F:\Pascal-IDE\ZwischenZeug\imgui_widgets.obj
+F:\Pascal-IDE\imgui_canvas.cpp;F:\Pascal-IDE\ZwischenZeug\imgui_canvas.obj
+F:\Pascal-IDE\CodeHelperInterface.cpp;F:\Pascal-IDE\ZwischenZeug\CodeHelperInterface.obj
 F:\Pascal-IDE\Main.cpp;F:\Pascal-IDE\ZwischenZeug\Main.obj
 F:\Pascal-IDE\PascalCompiler.cpp;F:\Pascal-IDE\ZwischenZeug\PascalCompiler.obj
 F:\Pascal-IDE\TextEditor.cpp;F:\Pascal-IDE\ZwischenZeug\TextEditor.obj
+F:\Pascal-IDE\TextureLoader.cpp;F:\Pascal-IDE\ZwischenZeug\TextureLoader.obj
 F:\Pascal-IDE\Window.cpp;F:\Pascal-IDE\ZwischenZeug\Window.obj

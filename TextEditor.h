@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <map>
 #include <regex>
+#include <functional>
 #include "imgui.h"
 
 class TextEditor
@@ -44,6 +45,13 @@ public:
 		Normal,
 		Word,
 		Line
+	};
+
+	enum class LineState 
+	{
+		Unchanged,
+		Unsaved,
+		Saved
 	};
 
 	struct Breakpoint
@@ -130,6 +138,7 @@ public:
 	typedef std::unordered_map<std::string, Identifier> Identifiers;
 	typedef std::unordered_set<std::string> Keywords;
 	typedef std::map<int, std::string> ErrorMarkers;
+	typedef std::map<int, LineState> LineStateMarkers;
 	typedef std::unordered_set<int> Breakpoints;
 	typedef std::array<ImU32, (unsigned)PaletteIndex::Max> Palette;
 	typedef uint8_t Char;
@@ -204,6 +213,11 @@ public:
 	int GetTotalLines() const { return (int)mLines.size(); }
 	bool IsOverwrite() const { return mOverwrite; }
 
+	bool IsBetweenQuotes();
+
+	void SetFilepath(std::string path) { this->m_pascalFilePath = path; }
+	std::string GetFilepath() { return this->m_pascalFilePath; }
+
 	void SetReadOnly(bool aValue);
 	bool IsReadOnly() const { return mReadOnly; }
 	bool IsTextChanged() const { return mTextChanged; }
@@ -212,8 +226,11 @@ public:
 	bool IsColorizerEnabled() const { return mColorizerEnabled; }
 	void SetColorizerEnable(bool aValue);
 
+	void SetAutocompletionWindowBoolActive(bool active) { m_AutocompletionWindowActive = active; }
+
 	Coordinates GetCursorPosition() const { return GetActualCursorCoordinates(); }
 	void SetCursorPosition(const Coordinates& aPosition);
+	ImVec2 GetScreenPositionFromTextPosition(const Coordinates& position);
 
 	inline void SetHandleMouseInputs(bool aValue) { mHandleMouseInputs = aValue; }
 	inline bool IsHandleMouseInputsEnabled() const { return mHandleKeyboardInputs; }
@@ -227,11 +244,12 @@ public:
 	inline void SetShowWhitespaces(bool aValue) { mShowWhitespaces = aValue; }
 	inline bool IsShowingWhitespaces() const { return mShowWhitespaces; }
 
-	void SetTabSize(int aValue);
-	inline int GetTabSize() const { return mTabSize; }
+	void SetVisibleTabSize(int aValue);
+	inline int GetVisibleTabSize() const { return mVisibleTabSize; }
 
-	void InsertText(const std::string& aValue);
-	void InsertText(const char* aValue);
+	void InsertText(const std::string& aValue, bool withLineStateMarkers);
+	void InsertText(const char* aValue, bool withLineStateMarkers);
+	void LoadTempalte(std::string templateName);
 
 	void MoveUp(int aAmount = 1, bool aSelect = false);
 	void MoveDown(int aAmount = 1, bool aSelect = false);
@@ -249,6 +267,9 @@ public:
 	void SelectAll();
 	bool HasSelection() const;
 
+	//Count tabs as one char not as many (1 instead of 2 or more)
+	int GetConvertedColumn() { return mConvertedColumn; }
+
 	void Copy();
 	void Cut();
 	void Paste();
@@ -259,11 +280,25 @@ public:
 	void Undo(int aSteps = 1);
 	void Redo(int aSteps = 1);
 
+	void MarkLinesSaved();
+	int GetLineStateMarkersCount() { return mLineStateMarkers.size(); }
+	LineStateMarkers GetLineStateMarkers() { return mLineStateMarkers; }
+
 	static const Palette& GetDarkPalette();
 	static const Palette& GetLightPalette();
 	static const Palette& GetRetroBluePalette();
+	static const Palette& GetPinkyPalette();
+
+	using OnCharTypedCallback = std::function<void(ImWchar)>;
+
+	void addOnCharTypedCallback(OnCharTypedCallback callback)
+	{
+		onCharTypedCallbacks.push_back(callback);
+	}
 
 private:
+	std::vector<OnCharTypedCallback> onCharTypedCallbacks;
+
 	typedef std::vector<std::pair<std::regex, PaletteIndex>> RegexList;
 
 	struct EditorState
@@ -323,13 +358,16 @@ private:
 	int InsertTextAt(Coordinates& aWhere, const char* aValue);
 	void AddUndo(UndoRecord& aValue);
 	Coordinates ScreenPosToCoordinates(const ImVec2& aPosition) const;
+	Coordinates ScreenPosToCoordinatesConverted(const ImVec2& aPosition) const;
 	Coordinates FindWordStart(const Coordinates& aFrom) const;
 	Coordinates FindWordEnd(const Coordinates& aFrom) const;
 	Coordinates FindNextWord(const Coordinates& aFrom) const;
 	int GetCharacterIndex(const Coordinates& aCoordinates) const;
 	int GetCharacterColumn(int aLine, int aIndex) const;
+	int GetCharacterColumnConverted(int aLine, int aIndex) const;
 	int GetLineCharacterCount(int aLine) const;
 	int GetLineMaxColumn(int aLine) const;
+	int GetLineMaxColumnConverted(int aLine) const;
 	bool IsOnWordBoundary(const Coordinates& aAt) const;
 	void RemoveLine(int aStart, int aEnd);
 	void RemoveLine(int aIndex);
@@ -350,8 +388,9 @@ private:
 	EditorState mState;
 	UndoBuffer mUndoBuffer;
 	int mUndoIndex;
+	size_t mConvertedColumn;
 
-	int mTabSize;
+	int mVisibleTabSize;
 	bool mOverwrite;
 	bool mReadOnly;
 	bool mWithinRender;
@@ -377,10 +416,15 @@ private:
 	bool mCheckComments;
 	Breakpoints mBreakpoints;
 	ErrorMarkers mErrorMarkers;
+	LineStateMarkers mLineStateMarkers;
 	ImVec2 mCharAdvance;
 	Coordinates mInteractiveStart, mInteractiveEnd;
 	std::string mLineBuffer;
 	uint64_t mStartTime;
 
 	float mLastClick;
+
+	bool m_AutocompletionWindowActive = false;
+
+	std::string m_pascalFilePath;
 };

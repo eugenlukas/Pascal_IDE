@@ -1,0 +1,191 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C28251",
+          "message": {
+            "text": "Inkonsistente Anmerkung für \"WinMain\": diese Instanz verfügt über keine Anmerkungen. Siehe c:\\program files (x86)\\windows kits\\10\\include\\10.0.22621.0\\um\\winbase.h(1037). "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/Main.cpp"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 12
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WinMain",
+                  "decoratedName": "WinMain",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "Die Variable \"AutoCompletionPrediction::m_pTextEditor\" ist nicht initialisiert. Eine Membervariable muss immer initialisiert werden (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/AutoCompletionPrediction.h"
+                },
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 1
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "AutoCompletionPrediction::{ctor}",
+                  "decoratedName": "??0AutoCompletionPrediction@@QEAA@XZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "targetSymbol": "AutoCompletionPrediction::m_pTextEditor"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33135.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///F:/Pascal-IDE/Main.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "8b6fae50074465af8449b1d0d447e188776fe5497bd4e44fb0f7c3bbc5abfabe"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///F:/Pascal-IDE/AutoCompletionPrediction.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "fd9e562851319154092c24cf63aad362a442978d50e82e47871544fd5c56448c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/pascalcompiler.h"
+          },
+          "hashes": {
+            "sha-256": "9eebe911717d20514b850ef466aba87067e48f0388b289881c259a6bbf098fc5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui_canvas.h"
+          },
+          "hashes": {
+            "sha-256": "85374488e31f8c2433a816e9c02c1e4fbfc36c3cd40b0bbe117ec12c9c9521c1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "af3454cd20ebcce8d406c9608bdd970dc116e1c6c962ce984357a0ae7f0ee18d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "bd89b32de6a8a286700383bae47b4f4bba753ba13058d1a350770c5232b2e4e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui_internal.h"
+          },
+          "hashes": {
+            "sha-256": "5c5bd7a1fd1e9a3f32f0663ff86a7a899cd62b27dd9da58dc65e770326f3118c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/window.h"
+          },
+          "hashes": {
+            "sha-256": "1ad38c58e0f6cd5c8a0b6370ffaff26c2cc2dd333b75eead1caa0d89a87105d2"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui_impl_glfw.h"
+          },
+          "hashes": {
+            "sha-256": "f77e5bba02a819b78df2251e9cf41ddca2866557309ef1b74eee6ce95f70a91d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui_impl_opengl3.h"
+          },
+          "hashes": {
+            "sha-256": "8b41f2d0d8d388ef9aee9c7cb73171ecae202118be3217b80cc1d6743012daca"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/texteditor.h"
+          },
+          "hashes": {
+            "sha-256": "b0847d97b726564f62ae0b2556cb2df00c7a78ec17f6005afb397745b749231f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/formdesignerwindow.h"
+          },
+          "hashes": {
+            "sha-256": "f75595f67f4c0d8561530b34484b8920778beb2a079454511978c18d01450aa1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/stb_image.h"
+          },
+          "hashes": {
+            "sha-256": "594c2fe35d49488b4382dbfaec8f98366defca819d916ac95becf3e75f4200b3"
+          }
+        }
+      ]
+    }
+  ]
+}

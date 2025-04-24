@@ -1,6 +1,0 @@
-[package]
-name=unzip
-version=2.2.4
-[require]
-packages=rtl 
-packages_win64_x86_64=

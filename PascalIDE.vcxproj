@@ -133,11 +133,13 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -150,6 +152,7 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,10 +160,15 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AutoCompletionPrediction.cpp" />
     <ClCompile Include="FileDialogs.cpp" />
+    <ClCompile Include="FileLogger.h" />
+    <ClCompile Include="FileTree.cpp" />
+    <ClCompile Include="FormDesignerWindow.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="imgui\imgui.cpp" />
     <ClCompile Include="imgui\imgui_demo.cpp" />
@@ -169,13 +177,20 @@
     <ClCompile Include="imgui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="imgui\imgui_tables.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="imgui_canvas.cpp" />
+    <ClCompile Include="CodeHelperInterface.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="PascalCompiler.cpp" />
     <ClCompile Include="TextEditor.cpp" />
+    <ClCompile Include="TextureLoader.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AutoCompletionPrediction.h" />
     <ClInclude Include="FileDialogs.h" />
+    <ClInclude Include="FileTree.h" />
+    <ClInclude Include="FormDesignerWindow.h" />
+    <ClInclude Include="imguitablabel.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_glfw.h" />
@@ -184,9 +199,30 @@
     <ClInclude Include="imgui\imstb_rectpack.h" />
     <ClInclude Include="imgui\imstb_textedit.h" />
     <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="imgui_canvas.h" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="CodeHelperInterface.h" />
     <ClInclude Include="PascalCompiler.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="StringHelper.h" />
     <ClInclude Include="TextEditor.h" />
+    <ClInclude Include="TextureLoader.h" />
+    <ClInclude Include="ThemeManager.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Pascal_IDE.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\User\Downloads\Eleazar_Icon\favicon.ico" />
+    <Image Include="PlayButton.png" />
+    <Image Include="SplashScreen.png" />
+    <Image Include="StopButton.png" />
+    <Image Include="ToolbarBg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeHelpers\AutocompletionHelper.exe" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

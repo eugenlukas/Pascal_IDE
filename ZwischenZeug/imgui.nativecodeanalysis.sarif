@@ -1,0 +1,2726 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger. \"window->RootWindowForNav\" enthält den gleichen NULL-Wert wie \"parent_window\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 7300,
+                  "startColumn": 12,
+                  "endLine": 7300,
+                  "endColumn": 51
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::UpdateWindowParentAndRootLinks",
+                  "decoratedName": "?UpdateWindowParentAndRootLinks@ImGui@@YAXPEAUImGuiWindow@@H0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7288,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7289,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7290,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "\"parent_window\" kann NULL sein. (Diese Verzweigung überspringen)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7296,
+                            "startColumn": 23
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7298,
+                            "startColumn": 60
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7300,
+                            "startColumn": 49
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Schleife überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7303,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7300,
+                            "startColumn": 49
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Schleife eintreten (Annahme: \"<Verzweigungsbedingung>\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 7300,
+                            "startColumn": 49
+                          }
+                        },
+                        "message": {
+                          "text": "\"parent_window\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger \"window->Viewport\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 16204,
+                  "startColumn": 13,
+                  "endLine": 16204,
+                  "endColumn": 74
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::WindowSelectViewport",
+                  "decoratedName": "?WindowSelectViewport@ImGui@@YAXPEAUImGuiWindow@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16079,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16080,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16081,
+                            "startColumn": 48
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16084,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16085,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16090,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16093,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16099,
+                            "startColumn": 73
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16114,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16115,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16127,
+                            "startColumn": 53
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16134,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16139,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16143,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16147,
+                            "startColumn": 77
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16157,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"window->Viewport\" kann NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16158,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16163,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"window->Viewport==0\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16164,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16168,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"!lock_viewport\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16170,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"flags\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16182,
+                            "startColumn": 144
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16200,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"<Verzweigungsbedingung>\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16204,
+                            "startColumn": 56
+                          }
+                        },
+                        "message": {
+                          "text": "\"window->Viewport\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger \"window\". In Zeile 16080 finden Sie einen früheren Ort, an dem dies vorkommen kann."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 16209,
+                  "startColumn": 5,
+                  "endLine": 16209,
+                  "endColumn": 56
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::WindowSelectViewport",
+                  "decoratedName": "?WindowSelectViewport@ImGui@@YAXPEAUImGuiWindow@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16079,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16080,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16081,
+                            "startColumn": 48
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16084,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16085,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16090,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16093,
+                            "startColumn": 71
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16099,
+                            "startColumn": 73
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16114,
+                            "startColumn": 10
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16115,
+                            "startColumn": 32
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16127,
+                            "startColumn": 53
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16134,
+                            "startColumn": 31
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16139,
+                            "startColumn": 20
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"flags\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16143,
+                            "startColumn": 44
+                          }
+                        },
+                        "message": {
+                          "text": "\"window\" ist ein Eingabe-/Ausgabeargument für \"ImGui::GetWindowAlwaysWantOwnViewport\" (in Zeile 1276 deklariert)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16143,
+                            "startColumn": 44
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16147,
+                            "startColumn": 77
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16157,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16158,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16163,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"window->Viewport==0\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16164,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "\"window\" ist ein Eingabe-/Ausgabeargument für \"ImGui::UpdateTryMergeWindowIntoHostViewport\" (in Zeile 1274 deklariert)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16164,
+                            "startColumn": 13
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"<Verzweigungsbedingung>\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16165,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "\"window\" ist ein Eingabe-/Ausgabeargument für \"ImGui::AddUpdateViewport\" (in Zeile 1268 deklariert)"
+                        }
+                      },
+                      "kinds": [
+                        "declaration"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16168,
+                            "startColumn": 9
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"!lock_viewport\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16170,
+                            "startColumn": 19
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"flags\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16182,
+                            "startColumn": 144
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16200,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "In diese Verzweigung eintreten (Annahme: \"<Verzweigungsbedingung>\")"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16204,
+                            "startColumn": 56
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 16209,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "\"window\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger \"node\". In Zeile 17189 finden Sie einen früheren Ort, an dem dies vorkommen kann."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 17278,
+                  "startColumn": 9,
+                  "endLine": 17278,
+                  "endColumn": 40
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::DockContextProcessDock",
+                  "decoratedName": "?DockContextProcessDock@ImGui@@YAXPEAUImGuiContext@@PEAUImGuiDockRequest@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17154,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17155,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17157,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17158,
+                            "startColumn": 18
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17159,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17160,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17163,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17166,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17167,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17168,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17180,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17182,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17186,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17188,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17189,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17190,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17191,
+                            "startColumn": 43
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17199,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17200,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17211,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17213,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" kann NULL sein. (Diese Verzweigung überspringen)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17278,
+                            "startColumn": 38
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger \"node->TabBar\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 17509,
+                  "startColumn": 13,
+                  "endLine": 17509,
+                  "endColumn": 81
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::DockNodeAddWindow",
+                  "decoratedName": "?DockNodeAddWindow@ImGui@@YAXPEAUImGuiDockNode@@PEAUImGuiWindow@@_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17468,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17468,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17469,
+                            "startColumn": 15
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17476,
+                            "startColumn": 5
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17481,
+                            "startColumn": 61
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17484,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17485,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17486,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17487,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17488,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17489,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17493,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17504,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17506,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "\"node->TabBar\" kann NULL sein. (In diese Verzweigung eintreten)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17508,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17509,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "\"node->TabBar\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger. \"node\" enthält den gleichen NULL-Wert wie \"info->CentralNode\". In Zeile 17682 finden Sie einen früheren Ort, an dem dies vorkommen kann."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 17696,
+                  "startColumn": 9,
+                  "endLine": 17696,
+                  "endColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "DockNodeFindInfo",
+                  "decoratedName": "?DockNodeFindInfo@@YAXPEAUImGuiDockNode@@PEAUImGuiDockNodeTreeInfo@@@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17682,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17688,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17692,
+                            "startColumn": 27
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17694,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" kann NULL sein. (Diese Verzweigung überspringen)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17696,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"node->ChildNodes[0]\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 17696,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger \"node\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 20082,
+                  "startColumn": 9,
+                  "endLine": 20082,
+                  "endColumn": 33
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::BeginDocked",
+                  "decoratedName": "?BeginDocked@ImGui@@YAXPEAUImGuiWindow@@PEA_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20033,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20036,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20038,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20039,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20050,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20051,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20052,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20053,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20061,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20062,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" kann NULL sein. (Diese Verzweigung überspringen)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20064,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"window->DockId!=0&&node==0\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20082,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C28182",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger. \"window->DockNode\" enthält den gleichen NULL-Wert wie \"node\". In Zeile 20082 finden Sie einen früheren Ort, an dem dies vorkommen kann."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                },
+                "region": {
+                  "startLine": 20153,
+                  "startColumn": 18,
+                  "endLine": 20153,
+                  "endColumn": 50
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ImGui::BeginDocked",
+                  "decoratedName": "?BeginDocked@ImGui@@YAXPEAUImGuiWindow@@PEA_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20033,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20036,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20038,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20039,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20050,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20051,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20052,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20053,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20061,
+                            "startColumn": 20
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20062,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" kann NULL sein. (Diese Verzweigung überspringen)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20064,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"window->DockId!=0&&node==0\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20082,
+                            "startColumn": 30
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20094,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20099,
+                            "startColumn": 26
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"node->HostWindow==0\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20112,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20115,
+                            "startColumn": 65
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20122,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20123,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20124,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20125,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20126,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20127,
+                            "startColumn": 30
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20128,
+                            "startColumn": 27
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"node->MergedFlags\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20132,
+                            "startColumn": 29
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"node->VisibleWindow==window\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20137,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20138,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20139,
+                            "startColumn": 32
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20142,
+                            "startColumn": 23
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20146,
+                            "startColumn": 22
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20149,
+                            "startColumn": 71
+                          }
+                        },
+                        "message": {
+                          "text": "Diese Verzweigung überspringen (Annahme: \"<Verzweigungsbedingung>\" ist false)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+                          },
+                          "region": {
+                            "startLine": 20153,
+                            "startColumn": 18
+                          }
+                        },
+                        "message": {
+                          "text": "\"node\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33135.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///F:/Pascal-IDE/imgui/imgui.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "e6ad9c20ce4caf52bb38453598219182f57058cbee4f45ab2fc7a7eb3ca8420f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "af3454cd20ebcce8d406c9608bdd970dc116e1c6c962ce984357a0ae7f0ee18d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "bd89b32de6a8a286700383bae47b4f4bba753ba13058d1a350770c5232b2e4e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui_internal.h"
+          },
+          "hashes": {
+            "sha-256": "5c5bd7a1fd1e9a3f32f0663ff86a7a899cd62b27dd9da58dc65e770326f3118c"
+          }
+        }
+      ]
+    }
+  ]
+}

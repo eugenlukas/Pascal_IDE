@@ -1,6 +1,0 @@
-[package]
-name=fcl-fpcunit
-version=2.2.4
-[require]
-packages=rtl paszlib fcl-xml
-packages_win64_x86_64=

@@ -1,6 +1,0 @@
-[package]
-name=fpgtk
-version=2.2.4
-[require]
-packages=rtl fcl-base gtk1
-packages_win64_x86_64=

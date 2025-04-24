@@ -1,0 +1,75 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33135.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui_impl_glfw.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "8918b54b3dac5150cd333f7bbfe0a3d6810559b1400c798758534cc851a4cfe3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "af3454cd20ebcce8d406c9608bdd970dc116e1c6c962ce984357a0ae7f0ee18d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "bd89b32de6a8a286700383bae47b4f4bba753ba13058d1a350770c5232b2e4e8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui_impl_glfw.h"
+          },
+          "hashes": {
+            "sha-256": "f77e5bba02a819b78df2251e9cf41ddca2866557309ef1b74eee6ce95f70a91d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/libraries/include/glfw/glfw3.h"
+          },
+          "hashes": {
+            "sha-256": "c3003adb9d460b9dde60c07539721757fb1e31337c2966ce285c157e4f38f223"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/libraries/include/glfw/glfw3native.h"
+          },
+          "hashes": {
+            "sha-256": "504d352883480b83c35b8e2ce248219ceac46a43eb58579e9f46e1f9da794308"
+          }
+        }
+      ]
+    }
+  ]
+}

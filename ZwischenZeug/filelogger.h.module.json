@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": ".\\ZwischenZeug\\FileLogger.h.obj",
+            "outputs": [
+                "F:\\Pascal-IDE\\ZwischenZeug\\vc143.pdb",
+                ".\\ZwischenZeug\\",
+                "F:\\Pascal-IDE\\ZwischenZeug\\FileLogger.h.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "FileLogger.h",
+                    "source-path": "f:\\pascal-ide\\filelogger.h",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

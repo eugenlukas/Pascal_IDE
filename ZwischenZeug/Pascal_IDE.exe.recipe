@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>F:\Pascal-IDE\x64\Debug\Pascal_IDE.exe</FullPath>
+      <FullPath>F:\Pascal-IDE\x64\Release\Pascal_IDE.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

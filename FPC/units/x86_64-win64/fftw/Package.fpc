@@ -1,7 +1,0 @@
-[package]
-name=fftw
-version=2.2.4
-[require]
-packages=rtl 
-libc=
-packages_win64_x86_64=

@@ -1,0 +1,494 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6011",
+          "message": {
+            "text": "Dereferenzierender NULL-Zeiger \"p_open\". "
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                },
+                "region": {
+                  "startLine": 9895,
+                  "startColumn": 18,
+                  "endLine": 9895,
+                  "endColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ShowExampleAppDockSpace",
+                  "decoratedName": "?ShowExampleAppDockSpace@@YAXPEA_N@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9822,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9823,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9824,
+                            "startColumn": 31
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9828,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9829,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9842,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9847,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9855,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9857,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9858,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9861,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9865,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9866,
+                            "startColumn": 24
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9873,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9876,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9878,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9882,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9883,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9884,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9886,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9887,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9888,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9889,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9890,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9891,
+                            "startColumn": 32
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9892,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9894,
+                            "startColumn": 32
+                          }
+                        },
+                        "message": {
+                          "text": "\"p_open\" kann NULL sein. (In diese Verzweigung eintreten)"
+                        }
+                      },
+                      "kinds": [
+                        "branch"
+                      ]
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+                          },
+                          "region": {
+                            "startLine": 9895,
+                            "startColumn": 25
+                          }
+                        },
+                        "message": {
+                          "text": "\"p_open\" wird dereferenziert, kann jedoch weiterhin NULL sein."
+                        }
+                      },
+                      "kinds": [
+                        "usage"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.38.33135.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///F:/Pascal-IDE/imgui/imgui_demo.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "c0ce73483ced19e318ea4639c8c424a1f1a66c887a4bc0ca06ed6d92cc69aaef"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imgui.h"
+          },
+          "hashes": {
+            "sha-256": "af3454cd20ebcce8d406c9608bdd970dc116e1c6c962ce984357a0ae7f0ee18d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///f:/pascal-ide/imgui/imconfig.h"
+          },
+          "hashes": {
+            "sha-256": "bd89b32de6a8a286700383bae47b4f4bba753ba13058d1a350770c5232b2e4e8"
+          }
+        }
+      ]
+    }
+  ]
+}
